@@ -41,10 +41,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build distributables
-        run: npm run dist
+      - name: Build distributables (never publish — release job handles that)
+        run: npm run dist -- --publish never
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CSC_IDENTITY_AUTO_DISCOVERY: false
 
       # ── Collect artifacts ──────────────────────────────────────────────
