@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "Electron companion to desktop-test-app for cua-sandbox MITM proxy integration tests",
   "main": "main.js",
+  "author": {
+    "name": "trycua",
+    "email": "hello@trycua.com"
+  },
   "scripts": {
     "start": "electron .",
     "dist": "electron-builder"
