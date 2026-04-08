@@ -5,13 +5,39 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "start:url": "electron . --url $CUA_LOAD_URL"
+    "dist": "electron-builder"
   },
   "dependencies": {
     "express": "^4.18.2"
   },
   "devDependencies": {
-    "electron": "^29.0.0"
+    "electron": "^29.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.trycua.desktop-test-app-electron",
+    "productName": "desktop-test-app-electron",
+    "linux": {
+      "target": ["deb", "AppImage"],
+      "category": "Utility"
+    },
+    "mac": {
+      "target": ["dmg", "zip"],
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "target": ["nsis", "portable"]
+    },
+    "deb": {
+      "packageName": "desktop-test-app-electron",
+      "depends": []
+    },
+    "files": [
+      "main.js",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "asar": true
   },
   "license": "MIT",
   "repository": {
