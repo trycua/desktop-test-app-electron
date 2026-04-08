@@ -1,0 +1,21 @@
+{
+  "name": "desktop-test-app-electron",
+  "version": "0.1.0",
+  "description": "Electron companion to desktop-test-app for cua-sandbox MITM proxy integration tests",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "start:url": "electron . --url $CUA_LOAD_URL"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "electron": "^29.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trycua/desktop-test-app-electron.git"
+  }
+}
